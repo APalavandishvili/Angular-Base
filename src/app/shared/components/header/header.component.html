@@ -1,4 +1,12 @@
-<img src={{source}} class="header-image">
+<!-- <img src={{source}} class="header-image">
 <div class="other-components">
     <div>{{name}}</div>
-</div>
+</div> -->
+
+<mat-card>
+    <img src={{source}} class="header-image">
+    <mat-card-subtitle>End</mat-card-subtitle>
+    <mat-card-actions align="end">
+      <ng-content></ng-content>
+    </mat-card-actions>
+  </mat-card>

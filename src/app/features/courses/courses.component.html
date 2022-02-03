@@ -1,3 +1,7 @@
-<app-course *ngFor="let courseItem of coursesList;" title="{{courseItem.title}}" text="{{courseItem.description}}"
-    creationDate="{{courseItem.creationDate}}" duration="{{courseItem.duration}}" authors="{{courseItem.authors}}">
+<app-course *ngFor='let courseItem of courseMockList; trackBy:trackById'>
+    <p>{{courseItem.title}}</p>
+    <p>{{courseItem.description}}</p>
+    <p>{{courseItem.creationDate}}</p>
+    <p>{{courseItem.duration}}</p>
+    <p>{{courseItem.authors}}</p>
 </app-course>
