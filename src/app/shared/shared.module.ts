@@ -4,12 +4,16 @@ import { FaIconLibrary, FontAwesomeModule } from '@fortawesome/angular-fontaweso
 import { faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { ButtonComponent } from './components/button/button.component';
 import { InfoComponent } from './components/info/info.component';
+import { EmailValidatorDirective } from './email-validator.directive';
+import { SearchComponent } from './components/search/search.component';
 
 @NgModule({
   declarations: [
 
     InfoComponent,
-       ButtonComponent
+       ButtonComponent,
+       EmailValidatorDirective,
+       SearchComponent
   ],
   imports: [
     CommonModule,FontAwesomeModule

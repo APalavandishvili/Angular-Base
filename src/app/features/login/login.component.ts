@@ -6,4 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent{
+    onSubmit(loginItem){
+        console.log(loginItem)
+    }
 }
