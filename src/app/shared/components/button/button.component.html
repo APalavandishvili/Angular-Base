@@ -1,3 +1,3 @@
-<fa-icon icon="fa-trash"></fa-icon>
-<fa-icon icon="fa-pencil"></fa-icon>
-<p>{{buttonText}}</p>
+<fa-icon *ngif="buttonIcon === 'trash'" icon="fa-trash"></fa-icon>
+<fa-icon *ngif="buttonIcon === 'pen'" icon="fa-pencil"></fa-icon>
+<p *ngif="buttonText.length > 0">{{buttonText}}</p>
