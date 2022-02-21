@@ -1,10 +1,11 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-course-crud',
+  selector: 'courseCrud',
   templateUrl: './course-crud.component.html',
-  styleUrls: ['./course-crud.component.scss']
+  styleUrls: ['./course-crud.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CourseCrudComponent implements OnInit {
     form: FormGroup;
