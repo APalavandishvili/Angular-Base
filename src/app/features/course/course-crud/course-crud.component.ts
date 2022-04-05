@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { FormArray, FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'courseCrud',
@@ -13,14 +13,14 @@ export class CourseCrudComponent implements OnInit {
         new FormControl('Nancy',),
         new FormControl('Drew'),
       ]);
-  constructor() { }
+  constructor(private formBuilder: FormBuilder) { }
 
   ngOnInit(){
-    this.form = new FormGroup({
-        title: new FormControl('',Validators.required),
-        description: new FormControl('',Validators.required),
-        authorName: new FormControl(''),
-        courseDuration: new FormControl('',Validators.compose([
+    this.form = this.formBuilder.group({
+        title: this.formBuilder.control('',Validators.required),
+        description: this.formBuilder.control('',Validators.required),
+        authorName: this.formBuilder.control(''),
+        courseDuration: this.formBuilder.control('',Validators.compose([
             Validators.required,
             Validators.min(0)
         ])),
