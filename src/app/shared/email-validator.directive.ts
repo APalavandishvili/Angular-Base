@@ -1,10 +1,11 @@
 import { Directive } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormControl, NG_VALIDATORS, Validator } from '@angular/forms';
 
 @Directive({
-  selector: '[appEmailValidator]'
+  selector: '[appEmailValidator]',
+  providers: [{provide: NG_VALIDATORS, useExisting: EmailValidatorDirective, multi: true}]
 })
-export class EmailValidatorDirective {
+export class EmailValidatorDirective implements Validator {
 
   constructor() { }
 
