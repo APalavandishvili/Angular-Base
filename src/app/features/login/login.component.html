@@ -1,1 +1,21 @@
-<p>login works!</p>
+<form #loginItemForm="ngForm" (ngSubmit)="onSubmit(loginItemForm.value)">
+    <header>Login</header>
+    <div>
+        <label>Email</label>
+        <input type="text" id="email" name="email" required [pattern]="emailPattern" ngModel >
+        <div *ngIf="offEmail.errors.required">
+            Email is required
+        </div>
+        <div *ngIf="offEmail.errors.pattern">
+            Email is invalid
+        </div>
+        <label>Password</label>
+        <input type="password" id="password" name="password" required ngModel>
+        <div *ngIf="password.errors?.['required']">
+            password is required.
+          </div>
+        <button type="submit" [disabled]="!loginItemForm.valid">Login</button>
+        <P>If you don't have an account you can</P>
+        <a>Registration</a>
+    </div>
+</form>

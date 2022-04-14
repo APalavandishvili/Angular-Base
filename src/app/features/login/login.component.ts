@@ -7,4 +7,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class LoginComponent{
+    onSubmit(loginItem){
+        console.log(loginItem)
+    }
 }
